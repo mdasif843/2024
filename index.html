@@ -32,18 +32,27 @@
             align-items: center;
 
         }
+		.widthkk{
+			width:50%;
+			margin:0 auto;
+		}
 
-
-
-        .header {
-
-            display: flex;
+		.widthk{
+			
+			width:50%;
+			margin:0 auto;
+			display: flex;
 
             justify-content: space-between;
 
             align-items: center;
 
             padding: 20px;
+			
+		}
+        .header {
+
+            
 
             background-color: #343a40;
 
@@ -199,29 +208,33 @@
 
 <body>
 
+ 
+
     <div class="header">
+		 <div class="widthk">
 
-        <div class="counter">$<span id="moneyCounter">0</span></div>
+			<div class="counter">$<span id="moneyCounter">0</span></div>
 
-        <button onclick="withdraw()" id="withdrawBtn">Withdraw</button>
+			<button onclick="withdraw()" id="withdrawBtn">Withdraw</button>
 
+		</div>
     </div>
 
-    
+<div class="widthkk">
 
     <div class="main" id="buttonContainer">
 
         <script>
 
-            for (let i = 1; i <= 6; i++) {
+            for (let i = 1; i <= 3; i++) {
 
                 const button = document.createElement('button');
 
-                button.textContent = 'Click here to earn $5';
+                button.textContent = 'Click here to earn $20';
 
                 button.onclick = function() {
 
-                    startProcess('https://www.toprevenuegate.com/ikdpw0gv6?key=1420d0f50983b0e17883a2a9dfaef748', 20);
+                    startProcess('https://www.toprevenuegate.com/ikdpw0gv6?key=1420d0f50983b0e17883a2a9dfaef748', 3);
 
                 };
 
@@ -258,7 +271,7 @@
 
 
     <div id="withdrawMessage"></div>
-
+</div>
 
 
     <script>
@@ -355,7 +368,7 @@
 
                     if (!moneyAdded) {
 
-                        moneyCounter += 0.5;
+                        moneyCounter += 20;
 
                         document.getElementById('moneyCounter').innerHTML = moneyCounter;
 
